@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const URL = "mongodb://localhost:27017/blogwebsite";
+const URL = "mongodb+srv://devkumark:thisisme@cluster0.ie8o5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 const dbConnect = async (req, res) => {
   try{

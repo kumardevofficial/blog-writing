@@ -20,7 +20,7 @@ const server = express();
 
 server.use(
   cors({
-    origin: 'http://localhost:5173', // Your frontend's URL
+    origin: 'https://blog-writing-iota.vercel.app/', // Your frontend's URL
     credentials: true, // Allow cookies and credentials
   })
 );
