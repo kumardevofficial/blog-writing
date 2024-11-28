@@ -9,6 +9,7 @@ import { router as userRouter } from './Routes/User.router.js';
 import { router as checkAuthRouter } from './Routes/CheckAuth.routes.js';
 import dbConnect from './DatabaseConnection/dbConnect.js';
 import cors from 'cors';
+import { createServer } from '@vercel/node';
 
 const server = express();
 
@@ -34,8 +35,8 @@ server.use("/article", FullArticleRouter);
 server.use("/user", userRouter);
 server.use("/auth", checkAuthRouter);
 
-// Connect to database
+// Connect to database (make sure it's optimized for serverless)
 dbConnect();
 
 // Export app for serverless function
-export default server;
+export default createServer(server);
