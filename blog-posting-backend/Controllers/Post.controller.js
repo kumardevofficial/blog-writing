@@ -14,12 +14,7 @@ const createPost = async (req, res) => {
 }
 
 const showallList = async (req, res) => {
-  try{
-    const allpost = await Post.find();
-    res.json(allpost);
-  }catch(err) {
-    res.status(500).json({"message":"internal server error", "err" : err})
-  }
+   res.json({message : " Server is started"});
 }
 
 const showTechnologNews = async (req, res) => {
