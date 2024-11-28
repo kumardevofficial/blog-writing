@@ -39,4 +39,6 @@ server.use("/auth", checkAuthRouter);
 dbConnect();
 
 // Export app for serverless function
-export default createServer(server);
+export default (req, res) => {
+  server(req, res);  
+};
